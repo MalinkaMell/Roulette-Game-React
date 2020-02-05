@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2c6732c4c2492ce5e9cdafe14288bcd",
+    "revision": "1fef476224ec19264693f54de65723a6",
     "url": "/Roulette-Game-React/index.html"
   },
   {
-    "revision": "b54c2aa1c2a48032b974",
-    "url": "/Roulette-Game-React/static/css/main.552a1d24.chunk.css"
+    "revision": "e2c4a60af500af359dad",
+    "url": "/Roulette-Game-React/static/css/main.283789a9.chunk.css"
   },
   {
-    "revision": "166b507665dd5ef4476e",
-    "url": "/Roulette-Game-React/static/js/2.db620d9a.chunk.js"
+    "revision": "97615deba4fc21e19174",
+    "url": "/Roulette-Game-React/static/js/2.e28294e4.chunk.js"
   },
   {
     "revision": "f032203ca460334c00de541c30a6078a",
-    "url": "/Roulette-Game-React/static/js/2.db620d9a.chunk.js.LICENSE"
+    "url": "/Roulette-Game-React/static/js/2.e28294e4.chunk.js.LICENSE"
   },
   {
-    "revision": "b54c2aa1c2a48032b974",
-    "url": "/Roulette-Game-React/static/js/main.39f537af.chunk.js"
+    "revision": "e2c4a60af500af359dad",
+    "url": "/Roulette-Game-React/static/js/main.4b21c8a1.chunk.js"
   },
   {
     "revision": "cb05e6b436497ebdcd07",
