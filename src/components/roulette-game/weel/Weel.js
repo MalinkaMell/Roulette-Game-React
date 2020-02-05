@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap';
 import './Weel.css';
 import Calc from '../calc/Calc';
 import options from '../options.json';
+import Winber from '../calc/Winber';
+import Winner from '../winner/Winner';
 
 class Weel extends React.Component {
   constructor(props) {
