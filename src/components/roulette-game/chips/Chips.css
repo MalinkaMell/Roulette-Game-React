@@ -1,0 +1,37 @@
+.chip{
+  margin:auto;
+  font-size:10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  color: #ffffff;
+  position:relative;
+  display:inline-block;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  width:20px;
+  height:20px;
+  background:#555;
+  border-radius:50%;
+  border:1px dashed white;
+  backface-visibility:hidden;
+  box-shadow:0 0 0 .2em #fff;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+
+
+.chip.red{
+  background:#DD4631;
+}
+
+.chip.blue{
+  background:#317DDD;
+}
+
+
+.chip:hover{
+  transform:rotate(90deg);
+}

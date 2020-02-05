@@ -1,0 +1,93 @@
+.table {
+ 
+}
+.blues {
+  background-color: navy;
+  color: white;
+  cursor: pointer;
+}
+
+.reds {
+  background-color: red;
+  color: red!important;
+  cursor: pointer;
+}
+
+.blacks {
+  background-color: black;
+  color: black!important;
+  cursor: pointer;
+}
+
+.zeros {
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+
+.list-group-item  {
+   width: 45px;
+   height: 45px;
+   font-size: 12px;
+   color: white;
+   text-align: center;
+   cursor: pointer;
+}
+
+.cella  {
+  width: 45px;
+  height: 45px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.chip-container-cella {
+  line-height: 45px;
+  text-align: center;
+}
+
+.bordo {
+  background-color: green;
+  width: 6px;
+  max-width: 6px;
+  height: 45px;
+  font-size:12px;
+  color: green;
+  cursor: pointer;
+  margin-left: -6px
+}
+
+.bordo .chip {
+  margin-left: -8px;
+}
+
+.chip-container-bordo {
+  line-height: 45px;
+  position: relative;
+}
+
+.bordo:hover {
+  background-color: yellow;
+  color: yellow;
+}
+
+.list-group-item:hover,
+.list-group-item:focus {
+  padding: 10px!important;
+  color: black;
+  background-color: orange!important;
+  text-align: center;
+}
+
+.red {
+  background-color: red!important;
+}
+
+.black {
+  background-color: black!important;
+}
+
+
