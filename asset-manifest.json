@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Roulette-Game-React/static/css/main.f0845007.chunk.css",
-    "main.js": "/Roulette-Game-React/static/js/main.36651d3f.chunk.js",
-    "main.js.map": "/Roulette-Game-React/static/js/main.36651d3f.chunk.js.map",
+    "main.js": "/Roulette-Game-React/static/js/main.f94dea0a.chunk.js",
+    "main.js.map": "/Roulette-Game-React/static/js/main.f94dea0a.chunk.js.map",
     "runtime-main.js": "/Roulette-Game-React/static/js/runtime-main.e0ef3880.js",
     "runtime-main.js.map": "/Roulette-Game-React/static/js/runtime-main.e0ef3880.js.map",
-    "static/js/2.b1ba421b.chunk.js": "/Roulette-Game-React/static/js/2.b1ba421b.chunk.js",
-    "static/js/2.b1ba421b.chunk.js.map": "/Roulette-Game-React/static/js/2.b1ba421b.chunk.js.map",
+    "static/js/2.dc9ca449.chunk.js": "/Roulette-Game-React/static/js/2.dc9ca449.chunk.js",
+    "static/js/2.dc9ca449.chunk.js.map": "/Roulette-Game-React/static/js/2.dc9ca449.chunk.js.map",
     "index.html": "/Roulette-Game-React/index.html",
-    "precache-manifest.7dd979556265c8912953c93f9ef73bf9.js": "/Roulette-Game-React/precache-manifest.7dd979556265c8912953c93f9ef73bf9.js",
+    "precache-manifest.7cfd3d743d66ced60323f637875150a5.js": "/Roulette-Game-React/precache-manifest.7cfd3d743d66ced60323f637875150a5.js",
     "service-worker.js": "/Roulette-Game-React/service-worker.js",
     "static/css/main.f0845007.chunk.css.map": "/Roulette-Game-React/static/css/main.f0845007.chunk.css.map",
-    "static/js/2.b1ba421b.chunk.js.LICENSE": "/Roulette-Game-React/static/js/2.b1ba421b.chunk.js.LICENSE"
+    "static/js/2.dc9ca449.chunk.js.LICENSE": "/Roulette-Game-React/static/js/2.dc9ca449.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.e0ef3880.js",
-    "static/js/2.b1ba421b.chunk.js",
+    "static/js/2.dc9ca449.chunk.js",
     "static/css/main.f0845007.chunk.css",
-    "static/js/main.36651d3f.chunk.js"
+    "static/js/main.f94dea0a.chunk.js"
   ]
 }
