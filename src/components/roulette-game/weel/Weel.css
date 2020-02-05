@@ -8,7 +8,7 @@
   position: relative;
   left:5px;
   top:5px;
-  background: #000000 url("roulette-bg.png") top center no-repeat;
+  background: #000000 url("/roulette-bg.png") top center no-repeat;
   background-size: contain;
   border-radius: 50%;
 }
