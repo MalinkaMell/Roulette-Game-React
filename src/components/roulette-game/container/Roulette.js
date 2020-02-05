@@ -26,10 +26,10 @@ class Roulette extends React.Component {
     return (
       <Container fluid className="table">
         <Row className="align-items-start">
-          <Col className="col-md-7">
+          <Col className="col-md-8">
             <RouletteTable updateArr={this.updateArr} num={this.state.num} arr={this.state.arr} />
           </Col>
-          <Col className="col-md-5">
+          <Col className="col-md-4">
             <Weel updateNum={this.updateNum} num={this.state.num} arr={this.state.arr}  />
           </Col>
         </Row>

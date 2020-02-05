@@ -13,6 +13,11 @@
   cursor: pointer;
 }
 
+.greens:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
 .reds {
   background-color: red;
   color: red!important;
@@ -25,22 +30,9 @@
   cursor: pointer;
 }
 
-.zeros {
-  background-color: darkgreen;
-  color: white;
-  cursor: pointer;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  font-size: 12px;
-  color: white;
-  text-align: center;
-}
-
-
 .cella  {
-  width: 45px;
-  height: 45px;
+  width: 45px!important;
+  height: 45px!important;
   font-size: 12px;
   color: white;
   text-align: center;
@@ -53,6 +45,24 @@
   text-align: center;
 }
 
+.cella-z  {
+  width: 45px!important;
+  height: 76px!important;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  clip-path: polygon(100% 0, 50% 0, 0 50%, 50% 100%, 100% 100%);
+  -webkit-clip-path:  polygon(100% 0, 50% 0, 0 50%, 50% 100%, 100% 100%);
+
+}
+
+.chip-container-cella-z {
+  line-height: 76px;
+  text-align: center;
+}
+
 .bordo {
   background-color: green;
   width: 6px;
@@ -61,7 +71,6 @@
   font-size:12px;
   color: green;
   cursor: pointer;
-  margin-left: -6px
 }
 
 .bordo .chip {
@@ -81,7 +90,7 @@
   background-color: green;
   height: 6px;
   max-height: 6px;
-  width: 45px;
+  width: 45px!important;
   font-size:2px;
   color: green;
   cursor: pointer;
@@ -102,6 +111,11 @@
   color: yellow;
 }
 
+.space {
+  width: 6px;
+  height: 6px;
+}
+
 .list-group-item:hover,
 .list-group-item:focus {
   padding: 10px!important;
@@ -109,6 +123,8 @@
   background-color: orange!important;
   text-align: center;
 }
+
+
 
 .red {
   background-color: red!important;
