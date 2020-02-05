@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "532173b8c817a5355c3d9bf6b25ac780",
+    "revision": "36a7e0811361650fa0cdd710bc5ba809",
     "url": "/Roulette-Game-React/index.html"
   },
   {
-    "revision": "33e72c0afd891427d8d0",
-    "url": "/Roulette-Game-React/static/css/main.f0845007.chunk.css"
+    "revision": "01810e2380444651f300",
+    "url": "/Roulette-Game-React/static/css/main.0e9acc75.chunk.css"
   },
   {
     "revision": "f4164dcd0d582b100290",
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Roulette-Game-React/static/js/2.dc9ca449.chunk.js.LICENSE"
   },
   {
-    "revision": "33e72c0afd891427d8d0",
+    "revision": "01810e2380444651f300",
     "url": "/Roulette-Game-React/static/js/main.f94dea0a.chunk.js"
   },
   {
     "revision": "17b476f31a2fa1b501f5",
     "url": "/Roulette-Game-React/static/js/runtime-main.e0ef3880.js"
+  },
+  {
+    "revision": "cee62276af6bd6fbfc77f97b7ce9eb0a",
+    "url": "/Roulette-Game-React/static/media/roulette-bg.cee62276.png"
   }
 ]);
