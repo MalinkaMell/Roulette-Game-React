@@ -1,4 +1,5 @@
 import React from 'react';
+import './Winner.css';
 
 const Winner = props => {
   return (

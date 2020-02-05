@@ -48,8 +48,9 @@ class RouletteTable extends React.Component {
   }
 
   zeroCol = [
-    { n: "00", c: "green", className: "greens cella-z chip-container-cella-z" },
-    { n: "0", c: "green", className: "greens cella-z chip-container-cella-z" }]
+    { n: "00", c: "green", className: "greens cella-z-top chip-container-cella-z" },
+    { n: "", c: "", className: "space-z" },
+    { n: "0", c: "green", className: "greens cella-z-bottom chip-container-cella-z" }]
 
   firstRow = [
     { n: "3", c: "red", className: "red cella chip-container-cella" },
@@ -209,10 +210,32 @@ class RouletteTable extends React.Component {
 
   twoByOneCol = [
     { n: "2:1:1", c: "blue", className: "blues cella chip-container-cella" },
-    { n: "", c: "", className: "space" },
+    { n: "", c: "", className: "space-2by1" },
     { n: "2:1:2", c: "blue", className: "blues cella chip-container-cella" },
-    { n: "", c: "", className: "space" },
-    { n: "2:1:3", c: "blue", className: "blues cella chip-container-cella" }]
+    { n: "", c: "", className: "space-2by1" },
+    { n: "2:1:3", c: "blue", className: "blues cella chip-container-cella" },
+    { n: "", c: "", className: "space-2by1" }]
+
+  fourtRow = [
+    { n: "1st 12", c: "blue", className: "blues cella-fourth chip-container-cella-fourth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "2nd 12", c: "blue", className: "blues cella-fourth chip-container-cella-fourth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "3rd 12", c: "blue", className: "blues cella-fourth chip-container-cella-fourth" }]
+
+  fifthRow = [
+    { n: "1 to 18", c: "blue", className: "blues cella-fifth chip-container-cella-fifth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "Even", c: "blue", className: "blues cella-fifth chip-container-cella-fifth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "Red", c: "blue", className: "reds cella-fifth chip-container-cella-fifth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "Black", c: "blue", className: "blacks cella-fifth chip-container-cella-fifth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "Odd", c: "blue", className: "blues cella-fifth chip-container-cella-fifth" },
+    { n: "", c: "", className: "space-fourth" },
+    { n: "19 to 36", c: "blue", className: "blues cella-fifth chip-container-cella-fifth" }
+  ]
 
 
   render() {
@@ -222,7 +245,7 @@ class RouletteTable extends React.Component {
       <React.Fragment>
         <div className="d-flex flex-row ">
           <div className="align-self-start">
-            <ul className="list-unstyled">
+            <ul className="list-unstyled pt-6">
               {
                 this.zeroCol.map(num =>
                   <li
@@ -235,8 +258,8 @@ class RouletteTable extends React.Component {
               }
             </ul>
           </div>
-
           <div className="align-self-start">
+          <div className="divider"></div>
             {/* First row */}
             <ul className="d-flex list-unstyled">
               {
@@ -316,35 +339,36 @@ class RouletteTable extends React.Component {
               }
             </ul>
             {/* Fourth row */}
-            <ListGroup horizontal className="justify-content-around">
-              <ListGroup.Item className="blues" style={{ width: "30%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("1st 12")}>1st 12</ListGroup.Item>
-              <ListGroup.Item className="blues" style={{ width: "35%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("2nd 12")}>2nd 12</ListGroup.Item>
-              <ListGroup.Item className="blues" style={{ width: "35%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("3rd 12")}>3rd 12</ListGroup.Item>
-            </ListGroup>
+            <ul className="d-flex list-unstyled">
+              {
+                this.fourtRow.map(num =>
+                  <li
+                    key={num.n}
+                    className={num.className}
+                    value={num.n}
+                    onClick={() => this.numsSelectionHandler(num.n)}>
+                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                  </li>)
+              }
+            </ul>
+            <div className="divider"></div>
             {/* Fifth row */}
-            <ListGroup horizontal className="mx-1 justify-content-around">
-              <div style={{ width: "30%" }}>
-                <ListGroup horizontal className="justify-content-around">
-                  <ListGroup.Item className="blues small" style={{ width: "50%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("1 to 18")} >1 to 18</ListGroup.Item>
-                  <ListGroup.Item className="blues small" style={{ width: "50%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("Even")}>Even</ListGroup.Item>
-                </ListGroup>
-              </div>
-              <div style={{ width: "35%" }}>
-                <ListGroup horizontal className=" justify-content-around">
-                  <ListGroup.Item className="reds small" style={{ width: "50%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("Red")}>.</ListGroup.Item>
-                  <ListGroup.Item className="blacks small" style={{ width: "50%", cursor: "pointer" }} onClick={() => this.numsSelectionHandler("Black")}>.</ListGroup.Item>
-                </ListGroup>
-              </div>
-              <div style={{ width: "35%" }}>
-                <ListGroup horizontal className=" justify-content-around">
-                  <ListGroup.Item className="blues small" style={{ width: "48%" }} onClick={() => this.numsSelectionHandler("Odd")}>Odd</ListGroup.Item>
-                  <ListGroup.Item className="blues small" style={{ width: "52%" }} onClick={() => this.numsSelectionHandler("19 to 36")}>19 to 36</ListGroup.Item>
-                </ListGroup>
-              </div>
-            </ListGroup>
-
+            <ul className="d-flex list-unstyled">
+              {
+                this.fifthRow.map(num =>
+                  <li
+                    key={num.n}
+                    className={num.className}
+                    value={num.n}
+                    onClick={() => this.numsSelectionHandler(num.n)}>
+                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                  </li>)
+              }
+            </ul>
+            <div className="divider"></div>
           </div>
           <div className="align-self-start">
+            <div className="divider"></div>
             <ul className="list-unstyled">
               {
                 this.twoByOneCol.map(num =>

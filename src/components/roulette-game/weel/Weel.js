@@ -155,7 +155,7 @@ class Weel extends React.Component {
     console.log(this.state.text)
     return (
       <React.Fragment>
-        <div className="roulette-container  align-self-center m-2">
+        <div className="roulette-container  align-self-center">
           <canvas ref="canvas" width={this.baseSize * 2} height={this.baseSize * 2} className="roulette-canvas"></canvas>
 
           <Button

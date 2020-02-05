@@ -1,7 +1,8 @@
 .table {
-  margin-top: 30px;
+  margin: 30px auto;
   padding: 60px;
   border: 2px solid #dcb44a;
   border-radius: 16px;
   background: linear-gradient(to bottom, #320202, #3D0101, #320202);
+  width: 100%;
 }

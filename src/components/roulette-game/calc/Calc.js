@@ -1,6 +1,6 @@
 import React from 'react';
 import './Styles.css';
-import { ListGroup, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Winner from '../winner/Winner'
 
 const Calc = props => {
@@ -24,17 +24,18 @@ const Calc = props => {
   return (
     <Container>
       <Row className="bg-red bg-bets">
-        <Col>
-          <ListGroup horizontal >
-            <div className="bets text-center">
-              Your bets: <b>{bets.join(", ")}</b>
-            </div>
-          </ListGroup>
+        <Col md={12}>
+          <div className="bets text-center">
+            Your bets: <b>{bets.join(", ")}</b>
+          </div>
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <Winner compare={compare} />
+      <Row className="bg-red bg-verdict">
+        <Col md={12}>
+          <div className="text-center mt-2">
+            <Winner compare={compare} />
+          </div>
+
         </Col>
       </Row>
 
