@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Roulette-Game-React/static/css/main.f0845007.chunk.css",
+    "main.js": "/Roulette-Game-React/static/js/main.36651d3f.chunk.js",
+    "main.js.map": "/Roulette-Game-React/static/js/main.36651d3f.chunk.js.map",
+    "runtime-main.js": "/Roulette-Game-React/static/js/runtime-main.e0ef3880.js",
+    "runtime-main.js.map": "/Roulette-Game-React/static/js/runtime-main.e0ef3880.js.map",
+    "static/js/2.b1ba421b.chunk.js": "/Roulette-Game-React/static/js/2.b1ba421b.chunk.js",
+    "static/js/2.b1ba421b.chunk.js.map": "/Roulette-Game-React/static/js/2.b1ba421b.chunk.js.map",
+    "index.html": "/Roulette-Game-React/index.html",
+    "precache-manifest.7dd979556265c8912953c93f9ef73bf9.js": "/Roulette-Game-React/precache-manifest.7dd979556265c8912953c93f9ef73bf9.js",
+    "service-worker.js": "/Roulette-Game-React/service-worker.js",
+    "static/css/main.f0845007.chunk.css.map": "/Roulette-Game-React/static/css/main.f0845007.chunk.css.map",
+    "static/js/2.b1ba421b.chunk.js.LICENSE": "/Roulette-Game-React/static/js/2.b1ba421b.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0ef3880.js",
+    "static/js/2.b1ba421b.chunk.js",
+    "static/css/main.f0845007.chunk.css",
+    "static/js/main.36651d3f.chunk.js"
+  ]
+}
