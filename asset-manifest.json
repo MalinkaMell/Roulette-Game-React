@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Roulette-Game-React/static/css/main.283789a9.chunk.css",
-    "main.js": "/Roulette-Game-React/static/js/main.4b21c8a1.chunk.js",
-    "main.js.map": "/Roulette-Game-React/static/js/main.4b21c8a1.chunk.js.map",
+    "main.css": "/Roulette-Game-React/static/css/main.a97465c9.chunk.css",
+    "main.js": "/Roulette-Game-React/static/js/main.546868be.chunk.js",
+    "main.js.map": "/Roulette-Game-React/static/js/main.546868be.chunk.js.map",
     "runtime-main.js": "/Roulette-Game-React/static/js/runtime-main.8092f5fc.js",
     "runtime-main.js.map": "/Roulette-Game-React/static/js/runtime-main.8092f5fc.js.map",
-    "static/js/2.e28294e4.chunk.js": "/Roulette-Game-React/static/js/2.e28294e4.chunk.js",
-    "static/js/2.e28294e4.chunk.js.map": "/Roulette-Game-React/static/js/2.e28294e4.chunk.js.map",
+    "static/js/2.c1bad99e.chunk.js": "/Roulette-Game-React/static/js/2.c1bad99e.chunk.js",
+    "static/js/2.c1bad99e.chunk.js.map": "/Roulette-Game-React/static/js/2.c1bad99e.chunk.js.map",
     "index.html": "/Roulette-Game-React/index.html",
-    "precache-manifest.b0c7c06afe2a193b496b7f0b50c40f4e.js": "/Roulette-Game-React/precache-manifest.b0c7c06afe2a193b496b7f0b50c40f4e.js",
+    "precache-manifest.5fb6eea948af2b0301bc8fca3509986f.js": "/Roulette-Game-React/precache-manifest.5fb6eea948af2b0301bc8fca3509986f.js",
     "service-worker.js": "/Roulette-Game-React/service-worker.js",
-    "static/css/main.283789a9.chunk.css.map": "/Roulette-Game-React/static/css/main.283789a9.chunk.css.map",
-    "static/js/2.e28294e4.chunk.js.LICENSE": "/Roulette-Game-React/static/js/2.e28294e4.chunk.js.LICENSE",
+    "static/css/main.a97465c9.chunk.css.map": "/Roulette-Game-React/static/css/main.a97465c9.chunk.css.map",
+    "static/js/2.c1bad99e.chunk.js.LICENSE": "/Roulette-Game-React/static/js/2.c1bad99e.chunk.js.LICENSE",
     "static/media/Weel.css": "/Roulette-Game-React/static/media/roulette-bg.cee62276.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8092f5fc.js",
-    "static/js/2.e28294e4.chunk.js",
-    "static/css/main.283789a9.chunk.css",
-    "static/js/main.4b21c8a1.chunk.js"
+    "static/js/2.c1bad99e.chunk.js",
+    "static/css/main.a97465c9.chunk.css",
+    "static/js/main.546868be.chunk.js"
   ]
 }
