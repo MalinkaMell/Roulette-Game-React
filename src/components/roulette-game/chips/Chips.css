@@ -34,4 +34,5 @@
 
 .chip:hover{
   transform:rotate(90deg);
+  color: yellow;
 }

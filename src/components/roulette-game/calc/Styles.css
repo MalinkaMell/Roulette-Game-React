@@ -15,9 +15,6 @@
   background: black;
 }
 
-.bets {
-  color: #f1c876;
-}
 
 .bg-bets, .bg-verdict {
   margin-top: 20px;
@@ -28,5 +25,11 @@
   flex-wrap: wrap;
   word-wrap: break-word;
   min-height: 100px;
+  color: #F2F098;
 }
 
+.bets span {
+  color: #fefefe;
+  font-weight: bold;
+  white-space: 5px;
+}

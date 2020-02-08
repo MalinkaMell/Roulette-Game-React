@@ -1,10 +1,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import './Weel.css';
-import Calc from '../calc/Calc';
 import options from '../options.json';
-import Winber from '../calc/Winber';
-import Winner from '../winner/Winner';
+
 
 class Weel extends React.Component {
   constructor(props) {
@@ -12,7 +10,7 @@ class Weel extends React.Component {
     this.state = {
       spinAngleStart: Math.random() * 10 + 10,
       spinTimeTotal: Math.random() * 3 + 4 * 1000,
-      startAngle: 10.92,
+      startAngle: 0,
       spinTime: 0,
       arc: Math.PI / (options.length / 2),
       text: ""
@@ -26,6 +24,10 @@ class Weel extends React.Component {
 
   componentDidMount() {
     this.drawRouletteWheel();
+  }
+  
+  componentWillUnmount(){
+    this.stopRotateWheel()
   }
 
   drawRouletteWheel() {
@@ -85,7 +87,7 @@ class Weel extends React.Component {
       const spinAngle = spinAngleStart - this.easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
       this.setState({
         startAngle: startAngle + spinAngle * Math.PI / 180,
-        spinTime: spinTime + 30,
+        spinTime: spinTime + 10,
       }, () => {
         this.drawRouletteWheel();
         clearTimeout(this.spinTimer);
@@ -108,16 +110,9 @@ class Weel extends React.Component {
     this.setState({ text })
     ctx.fillText(text, baseSize - ctx.measureText(text).width / 2, baseSize);
     ctx.restore();
-    this.onComplete(text);
+    this.props.updateNum(this.state.text);
   }
-
-  onComplete(txt) {
-    txt = this.text;
-    console.log('===================================')
-    console.log(txt)
-    console.log(this.text)
-    this.props.updateNum(this.state.text)
-  }
+  
 
   easeOut(t, b, c, d) {
     const ts = (t /= d) * t;
@@ -152,12 +147,12 @@ class Weel extends React.Component {
   }
 
   render() {
-    console.log(this.state.text)
+    
+    //console.log(this.state.text)
     return (
       <React.Fragment>
         <div className="roulette-container  align-self-center">
           <canvas ref="canvas" width={this.baseSize * 2} height={this.baseSize * 2} className="roulette-canvas"></canvas>
-
           <Button
             onClick={this.handleOnClick}
             className="m-2 spin-button"
@@ -165,12 +160,7 @@ class Weel extends React.Component {
             block variant="danger">
             {this.renderBtnText()}
           </Button>
-
         </div>
-        <div className="d-none">
-          <Calc number={this.props.num} selected={this.props.arr} />
-        </div>
-        
       </React.Fragment>
 
     );

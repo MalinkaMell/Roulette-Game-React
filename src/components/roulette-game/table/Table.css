@@ -156,6 +156,19 @@
   background-color: #F2F098;
 }
 
+.bet-space {
+  width: 6px;
+  height: 6px;
+  background-color: orange;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.bet-space .chip {
+  margin-top: -6px;
+  margin-left: -6px;
+}
+
 .space-fourth {
   width: 6px;
   height: 45px;

@@ -3,9 +3,15 @@ import './Winner.css';
 
 const Winner = props => {
   return (
-    <h1 className="verdict text-center">
+    <div>
+      <div className="text-center">
       {props.compare()}
-    </h1>
+    </div>
+    <p className="text-center">
+    
+  </p> 
+    </div>
+   
   )
 }
 
