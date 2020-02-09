@@ -6,7 +6,6 @@
   line-height: 20px;
   color: #ffffff;
   position:relative;
-  display:inline-block;
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
@@ -21,7 +20,9 @@
   z-index: 9999;
 }
 
-
+.no-chip {
+  display: none;
+}
 
 .chip.red{
   background:#DD4631;

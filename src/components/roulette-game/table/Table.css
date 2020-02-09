@@ -164,6 +164,10 @@
   font-size: 0;
 }
 
+.bet-space:hover {
+  background-color: yellow;
+}
+
 .bet-space .chip {
   margin-top: -6px;
   margin-left: -6px;

@@ -12,42 +12,69 @@ class RouletteTable extends React.Component {
     coins: this.props.coins,
     chip: this.props.chip
   }
+/* 
+  style = { "background": "red" } */
 
-  style = { "background": "red" }
 
   componentDidMount() {
-    this.numsSelectionHandler = (num) => {
 
-      let nums = [...this.state.nums];
+    this.numsSelectionHandler = (num) => { //selecting bets
 
-      if (nums.includes(num)) {
+      let nums = [...this.state.nums]; //spreading array of bets for furter use
 
+      if (this.state.numChildren === 0) {
+        this.props.updateChipVisibility(false); //update in roulette.js
+      } else {
+        this.props.updateChipVisibility(true); //update in roulette.js
+      }
+
+      if (nums.indexOf(num) >= 0) { //if number is present in array, deselect it
 
         nums.splice(nums.indexOf(num), 1);
 
-        this.setState({
-          numChildren: 0
-        });
+        //nums.map(item => item === num ? this.setState({ selected: false }) : this.setState({ selected: true }))
+        //this.setState({ selected: false }); 
 
-      } else {
+
+        /* CHIPS HANDLING */
+
+        this.setState({ numChildren: 0 }); //no chip on number
+
+        /* END CHIPS HANDLING */
+
+      } else if (nums.indexOf(num) === -1)  {
+
+
+        
         this.setState({ selected: true });
+
+        this.props.updateChipVisibility(true);
+
         nums.push(num);
+
         this.setState({
           numChildren: this.state.numChildren + 1
         });
       }
+
+      /* ARRAY OF BETS HANDLING */
       this.setState({ nums: nums }, () => {
         this.props.updateArr(nums)
       })
 
+      /* END ARRAY OF BETS HANDLING */
 
+      /* COINS HANDLING */
+
+      //calcolate coins
       let coins = this.state.coins - this.state.chip;
 
+      //update coins in rulette
       this.setState({ coins: coins }, () => {
         this.props.updateCoins(coins)
       })
 
-      console.log(nums);
+      /* END COINS HANDLING */
     }
   }
 
@@ -85,27 +112,27 @@ class RouletteTable extends React.Component {
 
   firstAndSecondBorder = [
     { n: ["3", "2"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["2", "3", "5", "6"], c: "", className: "bet-space" },
     { n: ["6", "5"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["5", "6", "8", "9"], c: "", className: "bet-space" },
     { n: ["9", "8"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["8", "9", "11", "12"], c: "", className: "bet-space" },
     { n: ["12", "11"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["11", "12", "14", "15"], c: "", className: "bet-space" },
     { n: ["15", "14"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["14", "15", "17", "18"], c: "", className: "bet-space" },
     { n: ["18", "17"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["17", "18", "20", "21"], c: "", className: "bet-space" },
     { n: ["21", "20"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["20", "21", "23", "24"], c: "", className: "bet-space" },
     { n: ["24", "23"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["23", "24", "26", "27"], c: "", className: "bet-space" },
     { n: ["27", "26"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["26", "27", "29", "30"], c: "", className: "bet-space" },
     { n: ["30", "29"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["29", "30", "32", "33"], c: "", className: "bet-space" },
     { n: ["33", "32"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space " },
+    { n: ["32", "33", "35", "36"], c: "", className: "bet-space" },
     { n: ["36", "35"], c: "yellow", className: "bordo-h chip-container-bordo-h" }
 
   ]
@@ -137,27 +164,27 @@ class RouletteTable extends React.Component {
 
   secondAndThirdBorder = [
     { n: ["2", "1"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["1", "2", "3", "4", "5", "6"], c: "", className: "bet-space" },
+    { n: ["1", "2", "4", "5"], c: "", className: "bet-space" },
     { n: ["5", "4"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["4", "5", "6", "7", "8", "9"], c: "", className: "bet-space" },
+    { n: ["4", "5", "6", "8"], c: "", className: "bet-space" },
     { n: ["8", "7"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["7", "8", "9", "10", "11", "12"], c: "", className: "bet-space" },
+    { n: ["7", "8", "10", "11"], c: "", className: "bet-space" },
     { n: ["11", "10"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["10", "11", "12", "13", "14", "15"], c: "", className: "bet-space" },
+    { n: ["10", "11", "13", "14"], c: "", className: "bet-space" },
     { n: ["14", "13"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["13", "14", "15", "16", "17", "18"], c: "", className: "bet-space" },
+    { n: ["13", "14", "16", "17"], c: "", className: "bet-space" },
     { n: ["17", "16"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["16", "17", "18", "19", "20", "21"], c: "", className: "bet-space" },
+    { n: ["16", "17", "19", "20"], c: "", className: "bet-space" },
     { n: ["20", "19"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["19", "20", "21", "22", "23", "24"], c: "", className: "bet-space" },
+    { n: ["19", "20", "22", "23"], c: "", className: "bet-space" },
     { n: ["23", "22"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["22", "23", "24", "25", "26", "27"], c: "", className: "bet-space" },
+    { n: ["22", "23", "25", "26"], c: "", className: "bet-space" },
     { n: ["26", "25"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["25", "26", "27", "28", "29", "30"], c: "", className: "bet-space" },
+    { n: ["25", "26", "28", "29"], c: "", className: "bet-space" },
     { n: ["29", "28"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["28", "29", "30", "31", "32", "33"], c: "", className: "bet-space" },
+    { n: ["28", "29", "31", "32"], c: "", className: "bet-space" },
     { n: ["32", "31"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: ["31", "32", "33", "34", "35", "36"], c: "", className: "bet-space" },
+    { n: ["31", "32", "34", "35"], c: "", className: "bet-space" },
     { n: ["35", "34"], c: "yellow", className: "bordo-h chip-container-bordo-h" }
 
   ]
@@ -189,27 +216,27 @@ class RouletteTable extends React.Component {
 
   thirdBorder = [
     { n: ["1", "2", "3"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["1", "2", "3", "4", "5", "6"], c: "", className: "bet-space" },
     { n: ["4", "5", "6"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["4", "5", "6", "7", "8", "9"], c: "", className: "bet-space" },
     { n: ["7", "8", "9"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["7", "8", "9", "10", "11", "12"], c: "", className: "bet-space" },
     { n: ["10", "11", "12"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["10", "11", "12", "13", "14", "15"], c: "", className: "bet-space" },
     { n: ["13", "14", "15"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["13", "14", "15", "16", "17", "18"], c: "", className: "bet-space" },
     { n: ["16", "17", "18"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["16", "17", "18", "19", "20", "21"], c: "", className: "bet-space" },
     { n: ["19", "20", "21"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["19", "20", "21", "22", "23", "24"], c: "", className: "bet-space" },
     { n: ["22", "23", "24"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["22", "23", "24", "25", "26", "27"], c: "", className: "bet-space" },
     { n: ["25", "26", "27"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["25", "26", "27", "28", "29", "30"], c: "", className: "bet-space" },
     { n: ["28", "29", "30"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["28", "29", "30", "31", "32", "33"], c: "", className: "bet-space" },
     { n: ["31", "32", "33"], c: "yellow", className: "bordo-h chip-container-bordo-h" },
-    { n: "", c: "", className: "space" },
+    { n: ["31", "32", "33", "34", "35", "36"], c: "", className: "bet-space" },
     { n: ["34", "3536"], c: "yellow", className: "bordo-h chip-container-bordo-h" }
 
   ]
@@ -258,7 +285,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -274,7 +301,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false} selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -287,7 +314,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -300,33 +327,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
-                  </li>)
-              }
-            </ul>
-            {/* Between second and thirs rows borders */}
-            <ul className="d-flex list-unstyled">
-              {
-                this.thirdBorder.map((num, index, arr) =>
-                  <li
-                    key={num.n + index + arr}
-                    className={num.className}
-                    value={num.n}
-                    onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
-                  </li>)
-              }
-            </ul>
-            {/* Third row */}
-            <ul className="d-flex list-unstyled">
-              {
-                this.thirdRow.map((num, index, arr) =>
-                  <li
-                    key={num.n + index + arr}
-                    className={num.className}
-                    value={num.n}
-                    onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -339,10 +340,37 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
+            {/* Third row */}
+            <ul className="d-flex list-unstyled">
+              {
+                this.thirdRow.map((num, index, arr) =>
+                  <li
+                    key={num.n + index + arr}
+                    className={num.className}
+                    value={num.n}
+                    onClick={() => this.numsSelectionHandler(num.n)}>
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
+                  </li>)
+              }
+            </ul>
+            {/* Between second and thirs rows borders */}
+            <ul className="d-flex list-unstyled">
+              {
+                this.thirdBorder.map((num, index, arr) =>
+                  <li
+                    key={num.n + index + arr}
+                    className={num.className}
+                    value={num.n}
+                    onClick={() => this.numsSelectionHandler(num.n)}>
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
+                  </li>)
+              }
+            </ul>
+
             {/* Fourth row */}
             <ul className="d-flex list-unstyled">
               {
@@ -352,7 +380,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false} selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -366,7 +394,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -382,7 +410,7 @@ class RouletteTable extends React.Component {
                     className={num.className}
                     value={num.n}
                     onClick={() => this.numsSelectionHandler(num.n)}>
-                    {<Chip id={num.n} selected={this.state.selected} selArr={[...this.state.nums]} />}
+                    {<Chip id={num.n} active={this.state.nums.includes(num.n) ? true : false}  selArr={[...this.state.nums]} />}
                   </li>)
               }
             </ul>
@@ -397,3 +425,67 @@ class RouletteTable extends React.Component {
 }
 
 export default RouletteTable;
+
+
+
+// componentDidMount() {
+
+//   this.numsSelectionHandler = (num) => {
+
+//     let nums = [...this.state.nums];
+
+
+
+//     if (nums.indexOf(num) >= 0) {
+
+//       nums.splice(nums.indexOf(num), 1);
+
+
+//       /* CHIPS HANDLING */
+
+//       this.setState({ numChildren: 0 }); //no chip on number
+
+//       this.props.updateChipVisibility(false); //update in roulette.js
+
+//       if (nums.indexOf(num) === -1) {
+//         this.setState({ selected: false }); 
+//       }
+
+//       /* END CHIPS HANDLING */
+
+//     } else if (nums.indexOf(num) === -1)  {
+
+//       this.setState(prevState => ({ selected: !prevState.selected }));
+//       this.setState({ selected: true });
+
+//       this.setState({ selected: true });
+
+//       this.props.updateChipVisibility(true);
+
+//       nums.push(num);
+
+//       this.setState({
+//         numChildren: this.state.numChildren + 1
+//       });
+//     }
+
+//     /* ARRAY OF BETS HANDLING */
+//     this.setState({ nums: nums }, () => {
+//       this.props.updateArr(nums)
+//     })
+
+//     /* END ARRAY OF BETS HANDLING */
+
+//     /* COINS HANDLING */
+
+//     //calcolate coins
+//     let coins = this.state.coins - this.state.chip;
+
+//     //update coins in rulette
+//     this.setState({ coins: coins }, () => {
+//       this.props.updateCoins(coins)
+//     })
+
+//     /* END COINS HANDLING */
+//   }
+// }

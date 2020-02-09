@@ -1,8 +1,50 @@
 .table {
   margin: 30px auto;
-  padding: 60px;
+  padding: 40px;
   border: 2px solid #dcb44a;
   border-radius: 16px;
-  background: linear-gradient(to bottom, #320202, #3D0101, #320202);
-  width: 100%;
+ /*  background: linear-gradient(to bottom, #320202, #3D0101, #320202); */
+ background: url("../../../images/bg1.jpg") top right no-repeat;
+width: 100%;
 }
+
+
+.divider-line {
+  position: relative;
+  border-top-width: 1px;
+
+  margin: 0 0 20px 0;
+  text-align: center;
+  left: auto;
+  right: auto;
+  
+}
+
+.divider-line-center {
+  text-align: center; 
+}
+
+.divider-line-linear-gradient {
+  height: 1px;
+  border: none;
+  background-image: linear-gradient(to right, transparent, #b0762b, #dcb44a, transparent);
+ }
+
+.diamond-line-icon {
+  position: absolute;
+  top: -11px;
+  width: 34px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  font-style: normal; 
+  color: #db1f27;
+  background-color: #8B0000; 
+}
+
+.divider-line-center .diamond-line-icon {
+  left: auto;
+  right: auto;
+  margin-left: -1.42857rem; }
+

@@ -35,5 +35,7 @@ body {
   margin: 0;
 }
 
-
+.text-small {
+  font-size: 90%;
+}
 /* ==================== */

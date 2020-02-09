@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import './Weel.css';
 import options from '../options.json';
 
@@ -25,8 +25,8 @@ class Weel extends React.Component {
   componentDidMount() {
     this.drawRouletteWheel();
   }
-  
-  componentWillUnmount(){
+
+  componentWillUnmount() {
     this.stopRotateWheel()
   }
 
@@ -112,7 +112,7 @@ class Weel extends React.Component {
     ctx.restore();
     this.props.updateNum(this.state.text);
   }
-  
+
 
   easeOut(t, b, c, d) {
     const ts = (t /= d) * t;
@@ -121,15 +121,20 @@ class Weel extends React.Component {
   }
 
   handleOnClick() {
-    this.spin();
+    
+      this.spin();
+    
+
   }
 
   SpinButton() {
-    return (
-      <div>
-        <input type="button" value="spin" className="btn btn-primary p-2 m-2" id="spin" onClick={this.handleOnClick} />
-      </div>
-    );
+    
+      return (
+        <div>
+          <input type="button" value="spin" className="btn btn-primary p-2 m-2" id="spin" onClick={this.handleOnClick} />
+        </div>
+      );
+    
   }
 
   renderBtnText = () => {
@@ -147,20 +152,34 @@ class Weel extends React.Component {
   }
 
   render() {
-    
-    //console.log(this.state.text)
+
+    console.log(this.props.arr)
     return (
       <React.Fragment>
+        <Image src="/resources/shic_logo2.png" alt="Casino S.C.I.C" className="mx-auto d-block w-50 mb-4"/>
+        
         <div className="roulette-container  align-self-center">
           <canvas ref="canvas" width={this.baseSize * 2} height={this.baseSize * 2} className="roulette-canvas"></canvas>
-          <Button
-            onClick={this.handleOnClick}
-            className="m-2 spin-button"
-            size="lg"
-            block variant="danger">
-            {this.renderBtnText()}
-          </Button>
+          {this.props.arr.length !== 0 ?
+            <Button
+              onClick={this.handleOnClick}
+              className="m-2 spin-button"
+              size="lg"
+              block variant="danger">
+              {this.renderBtnText()}
+            </Button>
+            :
+            <Button
+              className="m-2 spin-button text-small"
+              size="lg"
+              block variant="danger">
+              Please make your bets before spinning
+            </Button>
+            
+          }
+
         </div>
+        <div className="text-center mt-4 text-gold">instructions</div>
       </React.Fragment>
 
     );
