@@ -36,12 +36,12 @@ class Weel extends React.Component {
     let ctx;
     const canvas = this.refs.canvas;
     if (canvas.getContext) {
-      const outsideRadius = baseSize - 45;
-      const textRadius = baseSize - 65;
+      const outsideRadius = baseSize - 25;
+      const textRadius = baseSize - 45;
       const insideRadius = baseSize - 85;
       const innderOutline = baseSize - 125;
       ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, 600, 600);
+      // ctx.clearRect(0, 0, 400, 400);
 
       ctx.font = '14px Helvetica, Arial';
       for (let i = 0; i < options.length; i++) {
@@ -98,17 +98,14 @@ class Weel extends React.Component {
 
   stopRotateWheel() {
     let { startAngle, arc } = this.state;
-    const baseSize = this.baseSize;
     const canvas = this.refs.canvas;
     const ctx = canvas.getContext('2d');
     const degrees = startAngle * 180 / Math.PI + 90;
     const arcd = arc * 180 / Math.PI;
     const index = Math.floor((360 - degrees % 360) / arcd);
     ctx.save();
-    ctx.font = 'bold 50px Helvetica, Arial';
     const text = options[index].number;
     this.setState({ text })
-    ctx.fillText(text, baseSize - ctx.measureText(text).width / 2, baseSize);
     ctx.restore();
     this.props.updateNum(this.state.text);
   }
@@ -121,44 +118,42 @@ class Weel extends React.Component {
   }
 
   handleOnClick() {
-    
-      this.spin();
-    
-
+    this.spin();
   }
 
   SpinButton() {
-    
-      return (
-        <div>
-          <input type="button" value="spin" className="btn btn-primary p-2 m-2" id="spin" onClick={this.handleOnClick} />
-        </div>
-      );
-    
+
+    return (
+      <div>
+        <input type="button" value="spin" className="btn btn-primary p-2 m-2" id="spin" onClick={this.handleOnClick} />
+      </div>
+    );
+
   }
 
+  renderNumber = () => {
+    return (
+      <h1 className="blinky-number display-4 pt-1 m-0">{this.state.text}</h1>
+    )
+  }
   renderBtnText = () => {
     if (this.state.text !== "") {
       return (
         <div>
-          <h1>{this.state.text}</h1>
-          <p>Click to Spin!</p>
+          {this.renderNumber()}
         </div>
-
       )
     } else {
-      return (<h5>Click to Spin!</h5>)
+      return (<h6 className="blink text-uppercase m-0">Put your bets and spin the weel!</h6>)
     }
   }
 
   render() {
 
-    console.log(this.props.arr)
     return (
       <React.Fragment>
-        <Image src="/resources/shic_logo2.png" alt="Casino S.C.I.C" className="mx-auto d-block w-50 mb-4"/>
-        
-        <div className="roulette-container  align-self-center">
+
+        <div className="roulette-container  align-self-start">
           <canvas ref="canvas" width={this.baseSize * 2} height={this.baseSize * 2} className="roulette-canvas"></canvas>
           {this.props.arr.length !== 0 ?
             <Button
@@ -166,20 +161,18 @@ class Weel extends React.Component {
               className="m-2 spin-button"
               size="lg"
               block variant="danger">
-              {this.renderBtnText()}
+              <h5 className="blink text-uppercase m-0">Spin the weel!</h5>
             </Button>
             :
             <Button
               className="m-2 spin-button text-small"
               size="lg"
-              block variant="danger">
-              Please make your bets before spinning
+              block variant="dark">
+              {this.renderBtnText()}
             </Button>
-            
-          }
 
+          }
         </div>
-        <div className="text-center mt-4 text-gold">instructions</div>
       </React.Fragment>
 
     );
