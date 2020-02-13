@@ -1,6 +1,6 @@
 # Roulette-React-Game
 
-![Logo](client/src/images/shic_logo2.png)
+![Logo](client/public/resources/images/shic_logo2.png)
 
 
 ### Overview
@@ -21,6 +21,10 @@ Complete project can be found at:
 * NodeJS
 * ReactJS
 * Bootstrap / React Bootstrap
+
+---
+
+[Project Demo](https://malinkamell.github.io/Roulette-Game-React/)
 
 ---
 
