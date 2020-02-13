@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Roulette-Game-React/static/css/main.25a53778.chunk.css",
-    "main.js": "/Roulette-Game-React/static/js/main.ed1dcd8e.chunk.js",
-    "main.js.map": "/Roulette-Game-React/static/js/main.ed1dcd8e.chunk.js.map",
+    "main.js": "/Roulette-Game-React/static/js/main.f2c67be3.chunk.js",
+    "main.js.map": "/Roulette-Game-React/static/js/main.f2c67be3.chunk.js.map",
     "runtime-main.js": "/Roulette-Game-React/static/js/runtime-main.8092f5fc.js",
     "runtime-main.js.map": "/Roulette-Game-React/static/js/runtime-main.8092f5fc.js.map",
     "static/js/2.11dab573.chunk.js": "/Roulette-Game-React/static/js/2.11dab573.chunk.js",
     "static/js/2.11dab573.chunk.js.map": "/Roulette-Game-React/static/js/2.11dab573.chunk.js.map",
     "index.html": "/Roulette-Game-React/index.html",
-    "precache-manifest.06b0a4c20903d27359e6380dbc642659.js": "/Roulette-Game-React/precache-manifest.06b0a4c20903d27359e6380dbc642659.js",
+    "precache-manifest.71a0803743a4d0368d854ab866dbcf5a.js": "/Roulette-Game-React/precache-manifest.71a0803743a4d0368d854ab866dbcf5a.js",
     "service-worker.js": "/Roulette-Game-React/service-worker.js",
     "static/css/main.25a53778.chunk.css.map": "/Roulette-Game-React/static/css/main.25a53778.chunk.css.map",
     "static/js/2.11dab573.chunk.js.LICENSE": "/Roulette-Game-React/static/js/2.11dab573.chunk.js.LICENSE",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.8092f5fc.js",
     "static/js/2.11dab573.chunk.js",
     "static/css/main.25a53778.chunk.css",
-    "static/js/main.ed1dcd8e.chunk.js"
+    "static/js/main.f2c67be3.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Roulette-Game-React/precache-manifest.06b0a4c20903d27359e6380dbc642659.js"
+  "/Roulette-Game-React/precache-manifest.71a0803743a4d0368d854ab866dbcf5a.js"
 );
 
 self.addEventListener('message', (event) => {
