@@ -1,7 +1,6 @@
 # Roulette-React-Game
 
-![Logo](public/resources/images/shic_logo2.png)
-
+![Logo](public/resources/shic_logo2.png)
 
 ### Overview
 
