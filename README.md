@@ -1,6 +1,6 @@
 # Roulette-React-Game
 
-![Logo](client/public/resources/images/shic_logo2.png)
+![Logo](public/resources/images/shic_logo2.png)
 
 
 ### Overview
@@ -13,6 +13,7 @@ This was my personal assignement, and this is a stand alone version.
 Complete project can be found at:
 
 [Github repository](https://github.com/cchitla/casino-shic)
+
 [Heroku deployed demo](https://casino-shic.herokuapp.com/)
 
 ### Technologies used

@@ -231,7 +231,7 @@ class App extends React.Component {
     return (
       <Container>
         <Row className="justify-items-center pt-2">
-        <Image src="/resources/shic_logo2.png" className="img-fluid mx-auto logo" />
+        <Image src="resources/shic_logo2.png" className="img-fluid mx-auto logo" />
           <Container fluid className="table">
             <Row>
               <Col className="mx-5">
