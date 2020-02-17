@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4370338a7c4123a34606c76261d488ce",
+    "revision": "1631b80ca5a915f4f252ffecbc08994f",
     "url": "/Roulette-Game-React/index.html"
   },
   {
-    "revision": "a80544046547d15370dc",
+    "revision": "7f5c606a371ae7cc0796",
     "url": "/Roulette-Game-React/static/css/main.25a53778.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Roulette-Game-React/static/js/2.11dab573.chunk.js.LICENSE"
   },
   {
-    "revision": "a80544046547d15370dc",
-    "url": "/Roulette-Game-React/static/js/main.f2c67be3.chunk.js"
+    "revision": "7f5c606a371ae7cc0796",
+    "url": "/Roulette-Game-React/static/js/main.b8dbd8e2.chunk.js"
   },
   {
     "revision": "cb05e6b436497ebdcd07",
