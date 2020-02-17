@@ -17,8 +17,17 @@ class RouletteTable extends React.Component {
     fourthRow: this.props.fourthRow,
     fifthRow: this.props.fifthRow,
     columnLeft: this.props.columnLeft,
-    columnRight: this.props.columnRight
+    columnRight: this.props.columnRight,
+    disabled: false
     /* END JSONS ROWS */
+  }
+
+  disableTable = () => {	
+    if (this.props.spinning) {	
+      this.setState({disabled: true})	
+    } else {	
+      this.setState({disabled: false})	
+    }	
   }
 
   //SELECTING BETS
@@ -122,6 +131,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "firstRow")}>
                     <Chip
                       id={num.n}
@@ -137,6 +148,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "firstBorder")}>
                     <Chip
                       id={num.n}
@@ -152,6 +165,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "secondRow")}>
                     <Chip
                       id={num.n}
@@ -167,6 +182,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "secondBorder")}>
                     <Chip
                       id={num.n}
@@ -182,6 +199,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "thirdRow")}>
                     <Chip
                       id={num.n}
@@ -197,6 +216,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "thirdBorder")}>
                     <Chip
                       id={num.n}
@@ -212,8 +233,9 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "fourthRow")}
-                    disabled={num.disabled}
                   >
                     <Chip
                       id={num.n}
@@ -230,6 +252,8 @@ class RouletteTable extends React.Component {
                     key={num.n + index + arr}
                     className={num.className}
                     value={num.n}
+                    onMouseEnter={this.disableTable}	
+                    disabled={this.state.disabled}
                     onClick={() => this.numsSelectionHandler(num.n, "fifthRow")}>
                     <Chip
                       id={num.n}
@@ -249,6 +273,8 @@ class RouletteTable extends React.Component {
                     <button
                       className="blues"
                       value={num.n}
+                      onMouseEnter={this.disableTable}	
+                      disabled={this.state.disabled}
                       onClick={() => this.numsSelectionHandler(num.n, "columnRight")}>
                       <Chip
                         id={num.n}

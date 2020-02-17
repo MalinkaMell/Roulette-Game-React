@@ -119,6 +119,7 @@ class Weel extends React.Component {
 
   handleOnClick() {
     this.spin();
+    this.props.isSpinning(true)
   }
 
   SpinButton() {
@@ -144,7 +145,7 @@ class Weel extends React.Component {
         </div>
       )
     } else {
-      return (<h6 className="blink text-uppercase m-0">Put your bets and spin the weel!</h6>)
+      return (<h6 className="blink text-uppercase m-0">Put your bets and spin the wheel!</h6>)
     }
   }
 
@@ -161,7 +162,7 @@ class Weel extends React.Component {
               className="m-2 spin-button"
               size="lg"
               block variant="danger">
-              <h5 className="blink text-uppercase m-0">Spin the weel!</h5>
+              <h5 className="blink text-uppercase m-0">Spin the wheel!</h5>
             </Button>
             :
             <Button

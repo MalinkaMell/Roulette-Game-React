@@ -28,7 +28,8 @@ class App extends React.Component {
     chip: 10, //chip value
     coins: 100000, //coins count
     losses: 0, //losses count
-    message: "Put your bets and spin the weel!", //message
+    spinning: false, //the wheel is spinning?
+    message: "Put your bets and spin the wheel!", //message
     extArr: [], //little trick: pushing number here if user win, so if it's empty, user loose
     //my JSON rows
     firstRow, firstBorder, secondRow, secondBorder, thirdRow, thirdBorder, fourthRow, fifthRow, columnLeft, columnRight
@@ -50,10 +51,12 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    //grab user data from database and set state with that data
-    
+    //grab here user data from database and set state with that data
   }
-
+  
+  isSpinning = (isspinning) => {
+    isspinning === true ? this.setState({spinning: true}) : this.setState({spinning: false})
+  }
 
   //handling losing
   userLost = () => {
@@ -95,6 +98,7 @@ class App extends React.Component {
   resetGame = () => {
     this.setState({
       arr: [],
+      spinning: false,
       num: "",
       firstRow: firstRow.map(num => {
         num.visible = false;
@@ -256,6 +260,7 @@ class App extends React.Component {
                   count={this.state.count}
                   coins={this.state.coins}
                   chip={this.state.chip}
+                  spinning={this.state.spinning}
                 />
                 <Row className="bg-red bg-verdict align-items-center">
                   <Col md={4} className="d-flex align-items-center coins-col justify-content-center">
@@ -281,6 +286,7 @@ class App extends React.Component {
               </Col>
               <Col className="align-self-center">
                 <Weel
+                  isSpinning={this.isSpinning}
                   updateNum={this.updateNum}
                   num={this.state.num}
                   arr={this.state.arr}
